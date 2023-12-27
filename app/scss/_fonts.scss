@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'FuturaPT-Medium';
+    font-weight: 400;
+    font-style: normal;
+    src: local('FuturaPT-Medium'),
+         url(../fonts/FuturaPT-Medium.woff) format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FuturaPT-Bold';
+    font-weight: 700;
+    font-style: normal;
+    src: local('FuturaPT-Bold'),
+         url(../fonts/FuturaPT-Bold.woff) format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend-Regular';
+    font-weight: 400;
+    font-style: normal;
+    src: local('FuturaPT-Bold'),
+         url(../fonts/Lexend-Regular.ttf) format('ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lexend-Bold';
+    font-weight: 700;
+    font-style: normal;
+    src: local('FuturaPT-Bold'),
+         url(../fonts/Lexend-Bold.ttf) format('ttf');
+    font-display: swap;
+}
+
