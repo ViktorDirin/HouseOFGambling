@@ -4,13 +4,132 @@
 @import "libs.scss";
 @import "global";
 
+body {
+  
+}
+
+.hog-logo {
+  padding: 8px 8px;
+  @extend %lexend-700;
+  span {
+    color: $mblue;
+  }
+}
 
 
-// ----------------------------------- FOOTER ----------------------------
+.header {
+  &__inner {
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 64px;
+    border: 4px solid $mblue;
+  }
+  &__menu {
+    &-list {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-item {
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+    }
+    &-link {
+      &:hover {
+        color: $mblue;
+        transition: all 0.3s;
+      }
+    }
+  }
+  &__btn {
+    position: relative;
+    padding: 14px;
+    text-transform: uppercase;
+    border-radius: 24px;
+    border: 2px solid $mblue;
+    &:hover {
+      background-color: $mblue;
+    }
+    &:first-child {
+      padding-left: 38px;
+      &:hover {
+        &::before {
+          filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(155%) contrast(100%);
+        }
+      }
+      &::before {
+        position: absolute;
+        content: url(../images/icons/icon-planet.svg);
+        display: block;
+        width: 16px;
+        height: 16px;
+        top: 14px;
+        left: 14px;
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
 
 
-
-// ----------------------------------- FOOTER END ----------------------------
+// ----------------------------------------------- FOOTER
+.footer {
+  max-width: 1900px;
+  border-radius: 64px 64px 0 0;
+  border: 4px solid $mblue;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 40px 0 24px;
+  }
+  &__info-list,
+  &__social-list {
+    display: flex;
+  }
+  &__info-item {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+    &:hover {
+      color: $mblue;
+      text-decoration: underline;
+    }
+  }
+  &__social {
+    text-align: right;
+    &-text {
+      margin-bottom: 14px;
+    }
+    &-item {
+      width: 32px;
+      height: 32px;
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+    &-link {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #9DADF2, #478BF9);
+      background-image: url(../images/icons/icon-social-bg.svg);
+      &:hover {
+        background-image: url(../images/icons/icon-social-bg-hover.svg);
+        transition: all 0.3s;
+      }
+    }
+  }
+  
+  
+  
+}
 
 
 
