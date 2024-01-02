@@ -15,31 +15,76 @@
 
 .header {
   &__inner {
-    padding: 24px 48px;
-    margin-top: 18px;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 24px 48px;
+    margin-top: 18px;
     border-radius: 64px;
     border: 4px solid $mblue;
+    &-box {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__menu {
     &-list {
       display: flex;
       justify-content: space-between;
+      &.menu--active {
+        opacity: 100%;
+      }
     }
-
     &-item {
       &:not(:last-child) {
         margin-right: 32px;
       }
     }
-
     &-link {
       &:hover {
         color: $mblue;
         transition: all 0.3s;
+      }
+    }
+    &-btn {
+      position: relative;
+      display: none;
+      align-items: center;
+      cursor: pointer;
+      width: 28px;
+      height: 28px;
+    }
+    &-burger {
+      width: 28px;
+      height: 3px;
+      margin: 12px 0;
+      border-radius: 2px;
+      background-color: #ffffff;
+      transition: all 0.3s;
+      &.menu-burger--active {
+        rotate: -45deg;
+        transition: all 0.3s;
+        &::before {
+          rotate: 90deg;
+        }
+      }
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        width: 28px;
+        height: 3px;
+        left: 0;
+        border-radius: 2px;
+        background-color: #ffffff;
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
       }
     }
   }
@@ -55,12 +100,17 @@
       background-color: $mblue;
     }
 
-    &:first-child {
+    &-menu {
+      display: flex;
+    }
+
+    &-lang {
       padding-left: 38px;
 
       &:hover {
         &::before {
-          filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(155%) contrast(100%);
+          filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg)
+            brightness(155%) contrast(100%);
         }
       }
 
@@ -85,6 +135,7 @@
   max-width: 1900px;
   border-radius: 64px 64px 0 0;
   border: 4px solid $mblue;
+  z-index: 5;
 
   &__inner {
     display: flex;
@@ -136,6 +187,9 @@
       align-items: center;
       background: linear-gradient(to right, #9dadf2, #478bf9);
       background-image: url(../images/icons/icon-social-bg.svg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
 
       &:hover {
         background-image: url(../images/icons/icon-social-bg-hover.svg);
@@ -186,6 +240,10 @@
   }
 
   &__name {
+    &-wraper {
+      z-index: 5;
+    }
+
     &-title {
       @extend %lexend-700;
       font-size: 96px;
@@ -194,7 +252,7 @@
       text-transform: uppercase;
       margin-bottom: 24px;
 
-      &>span {
+      & > span {
         color: $mblue;
       }
     }
@@ -226,6 +284,10 @@
   }
 
   &__blog {
+    &-wraper {
+      z-index: 5;
+    }
+
     &-title {
       font-size: 40px;
       font-style: normal;
@@ -279,7 +341,7 @@
       &:hover {
         background-color: $mblue;
 
-        &>.main__blog-date {
+        & > .main__blog-date {
           color: #ffffff;
         }
       }
@@ -319,10 +381,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg,
-        rgba(17, 10, 29, 1) 0%,
-        rgba(17, 10, 29, 0.22872899159663862) 50%,
-        rgba(17, 10, 29, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(17, 10, 29, 1) 0%,
+      rgba(17, 10, 29, 0.22872899159663862) 50%,
+      rgba(17, 10, 29, 1) 100%
+    );
     z-index: 10;
   }
 
