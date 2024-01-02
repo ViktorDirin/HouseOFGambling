@@ -1,47 +1,25 @@
-// ------------------Example --
-// $accent: #fe3e57;
-// $defoult: #8d8d8d;
-// $title: #29282d;
-// $bg: #f6f6f6;
-// $border: #ececec;
-
-// %roboto-400{
-//     font-family: 'Roboto-Regular', sans-serif;
-//     font-weight: 400;
-// }
-// -----------------------------
-$bg: #110A1D;
+$bg: #110a1d;
 $mblue: #478bf9;
-$purple: #9DADF2;
-$mint: #7DDACF;
-$mblue-hover: linear-gradient(to right, #9DADF2, #478BF9);
+$purple: #9dadf2;
+$mint: #7ddacf;
+$mblue-hover: linear-gradient(to right, #9dadf2, #478bf9);
 
+%futura-400 {
+  font-family: "FuturaPT-Regular", sans-serif;
+  font-weight: 400;
+}
 
- %futura-400{
-    font-family: 'FuturaPT-Regular', sans-serif;
-    font-weight: 400;
- }
+%futura-700 {
+  font-family: "FuturaPT-Bold", sans-serif;
+  font-weight: 700;
+}
 
- %futura-700{
-    font-family: 'FuturaPT-Bold', sans-serif;
-    font-weight: 700;
- }
+%lexend-400 {
+  font-family: "Lexend-Regular", sans-serif;
+  font-weight: 400;
+}
 
- %lexend-400{
-    font-family: 'Lexend-Regular', sans-serif;
-    font-weight: 400;
- }
-
- %lexend-700{
-    font-family: 'Lexend-Bold', sans-serif;
-    font-weight: 700;
- }
-
-
-// ---------------- When problems try this... ---------
-// @function max($numbers...) {
-//     @return m#{a}x(#{$numbers});
-// }
-// @function min($numbers...) {
-//     @return m#{i}n(#{$numbers});
-// }
+%lexend-700 {
+  font-family: "Lexend-Bold", sans-serif;
+  font-weight: 700;
+}
